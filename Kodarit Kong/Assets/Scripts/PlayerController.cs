@@ -15,6 +15,12 @@ public class PlayerController : MonoBehaviour
     // nopeus
     public float moveSpeed = 5f;
 
+    //hyppyvoima
+    public float jumpForce = 4f;
+
+    //osuuko maahan
+    private bool grounded;
+
     // start funktio
     void Start()
     {
@@ -26,7 +32,11 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
-
+        if (Input.GetKeyDown("space") && grounded)
+        {
+            //hyppää
+            player.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
         movement.x = horizontalInput * moveSpeed;
     }
 
@@ -34,5 +44,22 @@ public class PlayerController : MonoBehaviour
     {
         player.position += movement * Time.deltaTime;
     }
+
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Platform"))
+        {
+            grounded = true;
+            //on kiinni maassa
+        }
+    }
     
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Platform"))
+        {
+            grounded = false;
+            //ei ole kiinni maassa
+        }
+    }
 }
