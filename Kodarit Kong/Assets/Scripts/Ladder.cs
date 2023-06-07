@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Ladder : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //tikapuiden yläpään paikka
+    public Transform topHandler;
+    //tikapuiden alapään paikka
+    public Transform bottomHandler;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    // Awake tapahtuu kerran ennen Start funktiota :)
+    void Awake(){
+        //haetaan tikkaiden pituus
+        float height = GetComponent<SpriteRenderer>().size.y;
+
+        //asetetaan tikkaiden yläpää
+        topHandler.position = new Vector3(transform.position.x, transform.position.y + (height / 2), 0);
+
+        //asetetaan tikkaiden alapää
+        bottomHandler.position = new Vector3(transform.position.x, transform.position.y - (height / 2), 0);
     }
 }
