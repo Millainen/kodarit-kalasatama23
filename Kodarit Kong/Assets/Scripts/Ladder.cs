@@ -9,7 +9,8 @@ public class Ladder : MonoBehaviour
     //tikapuiden alapään paikka
     public Transform bottomHandler;
 
-    // Awake tapahtuu kerran ennen Start funktiota :)
+    // Awake tapahtuu kerran ennen Start funktiota
+
     void Awake(){
         //haetaan tikkaiden pituus
         float height = GetComponent<SpriteRenderer>().size.y;

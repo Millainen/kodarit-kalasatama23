@@ -789,17 +789,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1454228932967163058, guid: 33bbbdad54d32e6499790d005c81da9f, type: 3}
+      propertyPath: m_Size.y
+      value: 3.0422823
+      objectReference: {fileID: 0}
     - target: {fileID: 5528626999877584708, guid: 33bbbdad54d32e6499790d005c81da9f, type: 3}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5528626999877584708, guid: 33bbbdad54d32e6499790d005c81da9f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.165641
+      value: -3.73
       objectReference: {fileID: 0}
     - target: {fileID: 5528626999877584708, guid: 33bbbdad54d32e6499790d005c81da9f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.86704165
+      value: 0.2911
       objectReference: {fileID: 0}
     - target: {fileID: 5528626999877584708, guid: 33bbbdad54d32e6499790d005c81da9f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -836,6 +840,10 @@ PrefabInstance:
     - target: {fileID: 5541659042102386813, guid: 33bbbdad54d32e6499790d005c81da9f, type: 3}
       propertyPath: m_Name
       value: Ladder
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445205696116372361, guid: 33bbbdad54d32e6499790d005c81da9f, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 3.0422823
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33bbbdad54d32e6499790d005c81da9f, type: 3}
